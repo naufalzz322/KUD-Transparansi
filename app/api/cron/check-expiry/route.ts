@@ -30,7 +30,7 @@ export async function GET(req: Request) {
     });
 
     // Get admin phone from settings
-    const settings = await prisma.settings.findFirst();
+    const settings = await prisma.setting.findFirst();
     const adminPhone = settings?.adminPhone;
 
     const alerts: Array<{ batchId: string; productName: string; type: string; sent: boolean }> = [];

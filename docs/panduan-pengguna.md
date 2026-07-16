@@ -257,7 +257,9 @@ Menunggu → Parsial → Lunas
 # Panduan Anggota
 
 <a name="akses-portal"></a>
+
 ## Akses Portal
+**Akses di menu anggota -> portal**
 
 ### Via QR Code
 1. Buka aplikasi kamera HP

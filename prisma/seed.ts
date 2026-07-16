@@ -1226,7 +1226,7 @@ async function createNotifications(adminId: string) {
     type: n.type,
     title: n.title,
     body: n.body,
-    data: (n.data as Prisma.InputJsonValue) || null,
+    data: (n.data as Prisma.InputJsonValue) || Prisma.JsonNull,
     read: n.daysAgo > 3, // Older notifications are marked as read
     createdAt: new Date(now.getTime() - n.daysAgo * 24 * 60 * 60 * 1000),
   }));

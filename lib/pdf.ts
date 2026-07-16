@@ -9,6 +9,7 @@ interface DepositRow {
   unit: string;
   grade: string | null;
   status: string;
+  productName?: string;
 }
 
 interface ExportOptions {

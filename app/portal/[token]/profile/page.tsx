@@ -28,10 +28,6 @@ export default function ProfilePage() {
     address: '',
   });
 
-  useEffect(() => {
-    fetchProfile();
-  }, [token]);
-
   const fetchProfile = async () => {
     try {
       const response = await fetch(`/api/portal/profile/${token}`);
@@ -51,50 +47,9 @@ export default function ProfilePage() {
     }
   };
 
-  const handleSave = async () => {
-    setSaving(true);
-    try {
-      const response = await fetch(`/api/portal/profile/${token}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-
-      if (response.ok) {
-        addToast('Profil berhasil diperbarui', 'success');
-        fetchProfile();
-      } else {
-        throw new Error('Gagal menyimpan');
-      }
-    } catch {
-      addToast('Gagal menyimpan profil', 'error');
-    } finally {
-      setSaving(false);
-    }
-  };
-
   useEffect(() => {
     fetchProfile();
   }, [token]);
-
-  const fetchProfile = async () => {
-    try {
-      const response = await fetch(`/api/portal/profile/${token}`);
-      if (response.ok) {
-        const data = await response.json();
-        setProfile(data.member);
-        setForm({
-          phone: data.member.phone || '',
-          email: data.member.email || '',
-          address: data.member.address || '',
-        });
-      }
-    } catch (error) {
-      console.error('Failed to fetch:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleSave = async () => {
     setSaving(true);

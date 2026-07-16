@@ -114,7 +114,7 @@ export async function PUT(
 
       const member = await prisma.member.findUnique({
         where: { id: session.memberId },
-        select: { pinHash: true },
+        select: { portalPin: true },
       });
 
       if (!member) {
@@ -123,7 +123,7 @@ export async function PUT(
 
       // Verify current PIN
       const currentPinHash = hashPin(body.currentPin);
-      if (member.pinHash !== currentPinHash) {
+      if (member.portalPin !== currentPinHash) {
         return NextResponse.json({ error: 'PIN saat ini salah' }, { status: 400 });
       }
 
@@ -131,7 +131,7 @@ export async function PUT(
       const newPinHash = hashPin(body.newPin);
       await prisma.member.update({
         where: { id: session.memberId },
-        data: { pinHash: newPinHash },
+        data: { portalPin: newPinHash },
       });
 
       return NextResponse.json({ success: true, message: 'PIN berhasil diubah' });

@@ -1,0 +1,43 @@
+{
+  "name": "KUD Transparansi",
+  "short_name": "KUD Trans",
+  "description": "Platform transparansi setoran anggota KUD dengan portal verifikasi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F0E8",
+  "theme_color": "#1B4D3E",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["business", "finance", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Portal Anggota",
+      "short_name": "Portal",
+      "description": "Akses portal anggota",
+      "url": "/portal"
+    },
+    {
+      "name": "Admin Dashboard",
+      "short_name": "Admin",
+      "description": "Dashboard admin",
+      "url": "/anggota"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

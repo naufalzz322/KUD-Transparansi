@@ -2,14 +2,15 @@
 
 ## Login Admin
 
-- Buka [link portal](https://kud-transparansi.vercel.app/)
+- Buka [link login](https://kud-transparansi.vercel.app/)
+  
 | Peran | Email | Password |
 |-------|-------|----------|
 | Admin | admin@kud.id | admin123 |
 
 ## Login Anggota
 
-- Buka [link portal](https://kud-transparansi.vercel.app/portal/1eb2947f4decbecc5b7b5dfe64ad0b2c9367342df02fa1cfbc8d5a82222069d2) atau scan QR Code
+- Buka link portal di (admin -> anggota -> portal) atau scan QR Code
 - Masukkan **6-digit PIN**: `123456`
 
 ---

@@ -33,7 +33,7 @@ Dokumen ini berisi panduan penggunaan sistem KUD Transparansi untuk **Admin/Peng
 ## Login Admin
 
 ### Cara Login
-1. Buka browser dan kunjungi URL sistem KUD
+1. Buka browser dan kunjungi [URL sistem KUD](https://kud-transparansi.vercel.app/login)
 2. Masukkan **Email** dan **Password**
 3. Klik tombol **Masuk**
 
@@ -41,7 +41,6 @@ Dokumen ini berisi panduan penggunaan sistem KUD Transparansi untuk **Admin/Peng
 | Peran | Email | Password |
 |-------|-------|----------|
 | Admin | admin@kud.id | admin123 |
-| Ketua | ketua@kud.id | chairman123 |
 
 > ⚠️ **Penting:** Segera ubah password setelah login pertama kali.
 
